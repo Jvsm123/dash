@@ -7,6 +7,10 @@ export default function Home()
 			<Head/>
 
 			<p>Aqui é um P</p>
+
+			<button type="button" onClick={() => router.push('/')}>
+				Raiz
+			</button>
 		</>
 	);
 };

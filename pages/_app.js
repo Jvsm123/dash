@@ -19,7 +19,7 @@ export default function MyApp({ Component, pageProps })
 
 	useEffect( () =>
 	{
-		const handlerRouteChange = url => gtag.pageview( url );
+		const handlerRouteChange = url => gtag.pageview(url);
 
 		router.events.on( 'routeChangeComplete', handlerRouteChange );
 
