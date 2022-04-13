@@ -9,8 +9,8 @@ export default function MyApp({ Component, pageProps })
 {
 	const router = useRouter();
 
-	const HJID = process.env.ENV_HJID || 2922466;
-	const HJSV = process.env.ENV_HJSV || 6;
+	const HJID = 2922466;
+	const HJSV = 6;
 
 	useEffect( () =>
 	{
@@ -26,5 +26,5 @@ export default function MyApp({ Component, pageProps })
 		router.events.off( 'routeChangeComplete', handlerRouteChange );
 	}, [router.events]);
 
-	return <Component {...pageProps } gid={GID}/>
+	return <Component {...pageProps }/>
 };
