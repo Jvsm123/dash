@@ -11,7 +11,6 @@ export default function MyApp({ Component, pageProps })
 
 	const HJID = process.env.ENV_HJID || 2922466;
 	const HJSV = process.env.ENV_HJSV || 6;
-	const GID = process.env.ENV_GTAGID || 'G-6T0S3MCKXJ';
 
 	useEffect( () =>
 	{
@@ -20,7 +19,7 @@ export default function MyApp({ Component, pageProps })
 
 	useEffect( () =>
 	{
-		const handlerRouteChange = url => gtag.pageview( GID, url );
+		const handlerRouteChange = url => gtag.pageview( url );
 
 		router.events.on( 'routeChangeComplete', handlerRouteChange );
 
