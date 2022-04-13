@@ -4,18 +4,17 @@ import { hotjar } from 'react-hotjar';
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 
-const HJID = process.env.ENV_HJID || null;
-const HJSV = process.env.ENV_HJSV || null;
-const GID = process.env.ENV_GTAGID || null;
 
 export default function MyApp({ Component, pageProps })
 {
 	const router = useRouter();
 
+	const HJID = process.env.ENV_HJID || 2922466;
+	const HJSV = process.env.ENV_HJSV || 6;
+	const GID = process.env.ENV_GTAGID || 'G-6T0S3MCKXJ';
+
 	useEffect( () =>
 	{
-		if( !HJID || !HJSV || !GID ) throw new Error("Evns não carregadas!");
-
 		hotjar.initialize( HJID, HJSV );
 	}, []);
 
